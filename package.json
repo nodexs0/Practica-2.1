@@ -1,0 +1,25 @@
+{
+  "name": "practica-2.1",
+  "version": "1.0.0",
+  "description": "Practica 2.1 con nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodexs0/Practica-2.1.git"
+  },
+  "keywords": [
+    "Web"
+  ],
+  "author": "Mariano Ugalde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nodexs0/Practica-2.1/issues"
+  },
+  "homepage": "https://github.com/nodexs0/Practica-2.1#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
