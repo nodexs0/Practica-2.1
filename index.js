@@ -4,11 +4,16 @@ const app = express();
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.send('Hola Mundo');
+    res.status(200).send(`Hola mundo`);
 });
 
-app.post('/saludo', (req, res) => {
-    res.send(`Hola ${req.body.nombre}`);
+app.post('/', (req, res) => {
+    if (req.body.nombre) {
+        const nombre = req.body.nombre;
+        res.status(200).send({ mensaje: `Hola ${nombre}` });
+    } else {
+        res.status(400).send('Debe proporcionar un nombre');
+    }
 });
 
 app.listen(8000, () => {
