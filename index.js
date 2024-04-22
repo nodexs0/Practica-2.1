@@ -23,12 +23,12 @@ app.get('/perfil', (req,res) => {
 app.put('/perfil', (req, res) => {
     if (req.body.telefono) {
         const telefono = req.body.telefono;
-        res.status(300).send({
+        res.status(200).send({
             "telefono" : "2411458790",
             "edad" : "23"
         })
     } else {
-        res.status(600).send('Proporciona antes un telefono')
+        res.status(400).send('Proporciona antes un telefono')
 }
 })
 
