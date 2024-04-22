@@ -16,6 +16,22 @@ app.post('/', (req, res) => {
     }
 });
 
+app.get('/perfil', (req,res) => {
+    res.status(200).send('Creando nueva ruta');
+});
+
+app.put('/perfil', (req, res) => {
+    if (req.body.telefono) {
+        const telefono = req.body.telefono;
+        res.status(300).send({
+            "telefono" : "2411458790",
+            "edad" : "23"
+        })
+    } else {
+        res.status(600).send('Proporciona antes un telefono')
+}
+})
+
 app.listen(8000, () => {
     console.log('Servidor en el puerto 8000');
 });
